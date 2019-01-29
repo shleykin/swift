@@ -38,14 +38,14 @@ if d<0 {
 
 }
 if d>0 {
-    x1 = (-b+sqrt(d))/2*a
-    x2 = (-b-sqrt(d))/2*a
+    x1 = (-b+sqrt(d))/(2*a)
+    x2 = (-b-sqrt(d))/(2*a)
     print("Дискриминант > 0 , два корня")
     print("x1= ",x1)
     print("x2= ",x2)
 }
 if d == 0  {
-    x1 = (-b+sqrt(d))/2*a
+    x1 = (-b+sqrt(d))/(2*a)
     print("Дискриминант = 0 , один корень")
     print("x1= ",x1)
 }
