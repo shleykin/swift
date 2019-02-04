@@ -10,7 +10,7 @@ import Foundation
 
 //1. Написать функцию, которая определяет, четное число или нет.
 
-/*
+
 func evenint(number: Int) -> String {
     let result = number % 2 == 0 ? "Четное" : "Нечетное"
     return result
@@ -42,7 +42,7 @@ let num2 = readLine()
 var IntNum2 = Int(num2!)
 print(devide3(number: IntNum2!))
 
-*/
+
 // создадим две функции для использования в 4 задании
 func evenintBool(number: Int) -> Bool {
     let result = number % 2 == 0 ? true : false
@@ -67,8 +67,8 @@ print ("Последнее число в массиве : ",Array100[99])
 //4. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
 
 for i in Array100 {
-
-    if evenintBool(number: i) == true || devide3Bool(number: i) == false
+    
+    if evenintBool(number: i) == false && devide3Bool(number: i) == true
         
    {
     //Array100.remove(at: i  - IntNum3!) // Thread 1: Fatal error: Index out of range ??????
@@ -77,11 +77,11 @@ for i in Array100 {
    }
     
 }
+Array100.removeAll()
+Array100 = newArray100
+print(Array100)
 
 
-print(newArray100)
-
-/*
 //5. * Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 100 элементов.
 // F[n] = F[n-1] + F[n-2]
 
@@ -136,7 +136,7 @@ func Eratosfen (n: Int) -> Bool {
     return true
 }
 
-print("Введите число , с которого начнется определение простое ли оно   : ")
+print("Введите число , с которого начнется определение простое ли оно , так же система создаст массив из 100 простых чисел после заданного числа  : ")
 let num5 = readLine()
 var IntNum5 = Int(num5!)
 
@@ -154,4 +154,4 @@ repeat {
 } while arraySimple.count < 100
 
 print(arraySimple)
-*/
+
