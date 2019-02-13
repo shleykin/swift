@@ -28,8 +28,8 @@ enum Color {
 
 enum Transmission : String {
     case manual = "Ручная"
-    case auto = "Автомат"
-    case robot = "Робот"
+    case auto   = "Автомат"
+    case robot  = "Робот"
 }
 
 enum Fuel {
