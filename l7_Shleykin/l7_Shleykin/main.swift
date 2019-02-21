@@ -145,6 +145,11 @@ class Humans {
     }
 }
 
+//extension Humans : CustomStringConvertible {
+//    var description: String{
+//        return "\() может стать моделью "
+//    }
+//}
 
 var somePal = Humans()
 
@@ -162,7 +167,8 @@ do {
 var someWomen = Humans()
 
 do {
-    try someWomen.topModel(humannationality: "Американка")
+    try someWomen.topModel(humannationality: "Украинка")
+    print(someWomen)
     
 } catch SomeErrors.invalidSelection {
     print("Повторите попытку")
@@ -177,6 +183,7 @@ do {
 
 do {
     try somePal.getAlcohol(humannationality: "Немец")
+    print(somePal)
     
 } catch SomeErrors.invalidSelection {
     print("Повторите попытку")
@@ -209,10 +216,11 @@ class Rectangle: Figure {
     }
 }
 
-var someFigure = Rectangle(sideA: 4.2, sideB: 0.0)
+var someFigure = Rectangle(sideA: 4.2, sideB: 0.4)
 
 do {
     try someFigure.calculatePerimeter()
+    print(someFigure)
 } catch FigureError.Error {
     print("Сторона прямоугольника не может быть меньше либо равной 0")
 }
@@ -223,4 +231,4 @@ extension Rectangle : CustomStringConvertible {
     }
 }
 
-print(someFigure.description)
+
