@@ -145,11 +145,7 @@ class Humans {
     }
 }
 
-//extension Humans : CustomStringConvertible {
-//    var description: String{
-//        return "\() может стать моделью "
-//    }
-//}
+
 
 var somePal = Humans()
 
@@ -167,8 +163,8 @@ do {
 var someWomen = Humans()
 
 do {
-    try someWomen.topModel(humannationality: "Украинка")
-    print(someWomen)
+    var result = try someWomen.topModel(humannationality: "Американка")
+    print(result)
     
 } catch SomeErrors.invalidSelection {
     print("Повторите попытку")
@@ -182,8 +178,8 @@ do {
 
 
 do {
-    try somePal.getAlcohol(humannationality: "Немец")
-    print(somePal)
+    var result1 = try somePal.getAlcohol(humannationality: "Чукча")
+    print(result1)
     
 } catch SomeErrors.invalidSelection {
     print("Повторите попытку")
