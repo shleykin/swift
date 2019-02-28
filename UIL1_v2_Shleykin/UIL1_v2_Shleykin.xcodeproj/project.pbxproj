@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		A8C2A1A12228076C009535F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C2A1A02228076C009535F1 /* AppDelegate.swift */; };
-		A8C2A1A32228076C009535F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C2A1A22228076C009535F1 /* ViewController.swift */; };
 		A8C2A1A62228076C009535F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C2A1A42228076C009535F1 /* Main.storyboard */; };
 		A8C2A1A82228076D009535F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C2A1A72228076D009535F1 /* Assets.xcassets */; };
 		A8C2A1AB2228076D009535F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C2A1A92228076D009535F1 /* LaunchScreen.storyboard */; };
+		A8C2A1B3222807C3009535F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C2A1B2222807C3009535F1 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A8C2A19D2228076C009535F1 /* UIL1_v2_Shleykin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIL1_v2_Shleykin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C2A1A02228076C009535F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8C2A1A22228076C009535F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A8C2A1A52228076C009535F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8C2A1A72228076D009535F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C2A1AA2228076D009535F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8C2A1AC2228076D009535F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C2A1B2222807C3009535F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				A8C2A1A02228076C009535F1 /* AppDelegate.swift */,
-				A8C2A1A22228076C009535F1 /* ViewController.swift */,
 				A8C2A1A42228076C009535F1 /* Main.storyboard */,
 				A8C2A1A72228076D009535F1 /* Assets.xcassets */,
 				A8C2A1A92228076D009535F1 /* LaunchScreen.storyboard */,
 				A8C2A1AC2228076D009535F1 /* Info.plist */,
+				A8C2A1B2222807C3009535F1 /* LoginViewController.swift */,
 			);
 			path = UIL1_v2_Shleykin;
 			sourceTree = "<group>";
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8C2A1A32228076C009535F1 /* ViewController.swift in Sources */,
+				A8C2A1B3222807C3009535F1 /* LoginViewController.swift in Sources */,
 				A8C2A1A12228076C009535F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
