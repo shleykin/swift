@@ -63,7 +63,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="signin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pug-su-gQO"/>
-                                                    <segue destination="dcA-WA-1kD" kind="show" id="Wm2-1b-x3b"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -104,6 +103,7 @@
                         <outlet property="loginTextField" destination="xh6-Qx-pjj" id="3YR-j3-EE3"/>
                         <outlet property="passTextField" destination="bJ0-7T-VLK" id="fc8-sM-R5O"/>
                         <outlet property="scroll" destination="v6g-lS-7qy" id="4qa-pz-Jzz"/>
+                        <segue destination="dcA-WA-1kD" kind="presentation" identifier="signinSegue" id="S6n-os-UBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -16,10 +16,12 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var scroll: UIScrollView!
     
+    private let signinSeg = "signinSegue"
+    
     @IBAction func signin(_ sender: Any) {
         if let login = loginTextField.text , let pass = passTextField.text {
             if login == "admin" && pass == "qwerty" {
-                print("WELCOME")
+                performSegue(withIdentifier: signinSeg, sender: self)
                 
             } else {
                 print("DENIED")
