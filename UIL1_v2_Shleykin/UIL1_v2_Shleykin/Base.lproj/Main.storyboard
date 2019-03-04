@@ -118,6 +118,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90804942229999996" green="1" blue="0.27952615460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qjl-v4-1Hu">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <segue destination="hO4-uh-c3O" kind="show" id="7yS-Ud-4Gk"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rRr-k6-rNL">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -134,9 +142,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SECOND" id="GnY-Im-Tl2"/>
-                    <connections>
-                        <segue destination="hO4-uh-c3O" kind="show" id="Qb1-MP-153"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1n7-Jp-3BJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,6 +201,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.36284175019999998" green="1" blue="0.58001306220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1ZL-1T-mUq">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <segue destination="DLl-My-KwK" kind="show" id="Prf-fm-36d"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IDY-7F-ysz">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -212,9 +225,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="FIRST" id="AHR-op-OLp"/>
-                    <connections>
-                        <segue destination="DLl-My-KwK" kind="show" id="7cx-H4-Z1K"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWI-a3-v2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
