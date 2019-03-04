@@ -25,16 +25,23 @@ class LoginViewController: UIViewController {
                 
             } else {
                 print("DENIED")
-                let alter = UIAlertController(title: "Ошибка", message: "Введены неверные данные пользователя", preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alter.addAction(action)
-                present(alter, animated: true, completion: nil)
+                showLoginError()
                 
                 
 
             }
         }
     }
+    
+    
+    func showLoginError() {
+        let alter = UIAlertController(title: "Ошибка", message: "Введены не верные данные пользователя", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alter.addAction(action)
+        present(alter, animated: true, completion: nil)
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // жест нажатия
