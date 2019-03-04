@@ -16,13 +16,22 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var scroll: UIScrollView!
     
+    private let signinSeg = "signinSegue"
+    
     @IBAction func signin(_ sender: Any) {
         if let login = loginTextField.text , let pass = passTextField.text {
             if login == "admin" && pass == "qwerty" {
-                print("WELCOME")
+                performSegue(withIdentifier: signinSeg, sender: self)
                 
             } else {
                 print("DENIED")
+                let alter = UIAlertController(title: "Ошибка", message: "Введены неверные данные пользователя", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alter.addAction(action)
+                present(alter, animated: true, completion: nil)
+                
+                
+
             }
         }
     }
