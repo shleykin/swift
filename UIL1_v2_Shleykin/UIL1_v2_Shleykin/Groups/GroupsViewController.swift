@@ -28,7 +28,8 @@ class GroupsViewController: UITableViewController {
             let newgroup = segue.source as! OtherGroupsViewController
             
             if let indexPath = newgroup.tableView.indexPathForSelectedRow {
-                let group = newgroup.otherGroups[indexPath.row]
+                //let group = newgroup.otherGroups[indexPath.row]
+                let group = otherGroups[indexPath.row]
                 groups.append(group)
                 tableView.reloadData()
             }

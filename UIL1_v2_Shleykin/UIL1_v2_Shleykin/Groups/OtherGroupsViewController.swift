@@ -8,33 +8,36 @@
 
 import UIKit
 
+public var otherGroups = ["Металлисты","Рэперы","Фолк"]
+
 class OtherGroupsViewController: UITableViewController {
     
-    var otherGroups = ["Металлисты","Рэперы","Фолк"]
+    //var otherGroups = ["Металлисты","Рэперы","Фолк"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
+    
+    
+    @IBAction func didSelectNewGroup(segue: UIStoryboardSegue) {
+        if segue.identifier == "AddGroup" {
+            let newgroup = segue.source as! OtherGroupsViewController
+            
+            if let indexPath = newgroup.tableView.indexPathForSelectedRow {
+                //let group = newgroup.otherGroups[indexPath.row]
+                otherGroups.remove(at: indexPath.row)
+                //tableView.reloadData()
+            }
+        }
+    }
  
-
-   // override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-   //     return 1
-   //}
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return otherGroups.count
     }
 
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "OtherGroupCell", for: indexPath)
-        
         cell.textLabel?.text = otherGroups[indexPath.row]
         return cell
     }
@@ -48,9 +51,9 @@ class OtherGroupsViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+   /* override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
