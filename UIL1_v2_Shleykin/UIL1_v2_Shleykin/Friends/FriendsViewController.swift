@@ -9,6 +9,16 @@
 import UIKit
 
 class FriendsViewController: UITableViewController {
+    
+    var friends =    [
+        "Иван Иванов",
+        "Петр Петров",
+        "Олег Олегов",
+        "Артем Артемов",
+        "Алексей Алексеев",
+    ]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
