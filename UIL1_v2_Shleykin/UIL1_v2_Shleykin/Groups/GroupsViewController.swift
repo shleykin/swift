@@ -61,8 +61,9 @@ class GroupsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            let group = groups[indexPath.row]
+            otherGroups.append(group)
             groups.remove(at: indexPath.row)
-            
             tableView.deleteRows(at: [indexPath], with: .fade)
         } //else if editingStyle == .insert {}
     }
