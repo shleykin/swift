@@ -30,11 +30,10 @@ class GroupsViewController: UITableViewController {
             if let indexPath = newgroup.tableView.indexPathForSelectedRow {
                 //let group = newgroup.otherGroups[indexPath.row]
                 let group = otherGroups[indexPath.row]
-                
-                if !groups.contains(group) {
-                        groups.append(group)
-                        tableView.reloadData()
-                }
+                groups.append(group)
+                otherGroups.remove(at: indexPath.row)
+                tableView.reloadData()
+
             }
         }
     }
@@ -63,6 +62,7 @@ class GroupsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             groups.remove(at: indexPath.row)
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
         } //else if editingStyle == .insert {}
     }
