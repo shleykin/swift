@@ -126,7 +126,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JuL-L6-A6g">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="groups" translatesAutoresizingMaskIntoConstraints="NO" id="JuL-L6-A6g">
                                             <rect key="frame" x="11" y="0.0" width="52" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -211,7 +211,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k6u-ml-7t4">
-                                <rect key="frame" x="76" y="189" width="223" height="289"/>
+                                <rect key="frame" x="76" y="233" width="223" height="289"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="223" id="9ij-9h-msx"/>
@@ -231,7 +231,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="222" height="286"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nD2-XK-S3B">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="friend" translatesAutoresizingMaskIntoConstraints="NO" id="nD2-XK-S3B">
                                                     <rect key="frame" x="20" y="49" width="182" height="188"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -295,7 +295,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQZ-Cd-SkU">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="friend" translatesAutoresizingMaskIntoConstraints="NO" id="uQZ-Cd-SkU">
                                             <rect key="frame" x="11" y="0.0" width="52" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -303,6 +303,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="friendName" destination="1Bw-e4-gZP" id="Ie5-r7-msd"/>
+                                    <segue destination="XoW-LR-JSB" kind="show" id="J0s-xH-4a1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -354,5 +355,7 @@
     </scenes>
     <resources>
         <image name="VKIcon" width="768" height="768"/>
+        <image name="friend" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="groups" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
 </document>
