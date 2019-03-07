@@ -205,7 +205,7 @@
         <!--Avatars View Controler-->
         <scene sceneID="wPf-v7-FOt">
             <objects>
-                <viewController title="Avatars View Controler" id="XoW-LR-JSB" sceneMemberID="viewController">
+                <viewController title="Avatars View Controler" id="XoW-LR-JSB" customClass="AvatarsViewController" customModule="UIL1_v2_Shleykin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2St-Bu-dqe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yTI-Sa-wv4">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AvatarsViewCell" id="yTI-Sa-wv4" customClass="AvatarsViewCell" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
                                         <rect key="frame" x="0.5" y="0.0" width="222" height="286"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
