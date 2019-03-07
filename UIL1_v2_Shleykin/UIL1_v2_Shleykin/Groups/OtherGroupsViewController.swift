@@ -19,7 +19,7 @@ class OtherGroupsViewController: UITableViewController {
 
     }
     
-    
+   /*
     @IBAction func didSelectNewGroup(segue: UIStoryboardSegue) {
         if segue.identifier == "AddGroup" {
             let newgroup = segue.source as! OtherGroupsViewController
@@ -31,7 +31,7 @@ class OtherGroupsViewController: UITableViewController {
             }
         }
     }
- 
+    */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return otherGroups.count
     }

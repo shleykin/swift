@@ -30,8 +30,11 @@ class GroupsViewController: UITableViewController {
             if let indexPath = newgroup.tableView.indexPathForSelectedRow {
                 //let group = newgroup.otherGroups[indexPath.row]
                 let group = otherGroups[indexPath.row]
-                groups.append(group)
-                tableView.reloadData()
+                
+                if !groups.contains(group) {
+                        groups.append(group)
+                        tableView.reloadData()
+                }
             }
         }
     }
