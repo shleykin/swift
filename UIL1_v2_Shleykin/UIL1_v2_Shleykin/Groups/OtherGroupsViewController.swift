@@ -12,26 +12,12 @@ public var otherGroups = ["Металлисты","Рэперы","Фолк"]
 
 class OtherGroupsViewController: UITableViewController {
     
-    //var otherGroups = ["Металлисты","Рэперы","Фолк"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-   /*
-    @IBAction func didSelectNewGroup(segue: UIStoryboardSegue) {
-        if segue.identifier == "AddGroup" {
-            let newgroup = segue.source as! OtherGroupsViewController
-            
-            if let indexPath = newgroup.tableView.indexPathForSelectedRow {
-                //let group = newgroup.otherGroups[indexPath.row]
-                otherGroups.remove(at: indexPath.row)
-                //tableView.reloadData()
-            }
-        }
-    }
-    */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return otherGroups.count
     }
