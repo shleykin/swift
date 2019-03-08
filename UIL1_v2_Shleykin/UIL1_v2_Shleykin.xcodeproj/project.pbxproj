@@ -17,6 +17,8 @@
 		A8C2A1A82228076D009535F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C2A1A72228076D009535F1 /* Assets.xcassets */; };
 		A8C2A1AB2228076D009535F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C2A1A92228076D009535F1 /* LaunchScreen.storyboard */; };
 		A8C2A1B3222807C3009535F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C2A1B2222807C3009535F1 /* LoginViewController.swift */; };
+		A8C5691D2232AF9A00DB5D1C /* NewGroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C5691C2232AF9A00DB5D1C /* NewGroupViewCell.swift */; };
+		A8C5691F2232AFB300DB5D1C /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C5691E2232AFB300DB5D1C /* NewGroupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		A8C2A1AA2228076D009535F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8C2A1AC2228076D009535F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8C2A1B2222807C3009535F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A8C5691C2232AF9A00DB5D1C /* NewGroupViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupViewCell.swift; sourceTree = "<group>"; };
+		A8C5691E2232AFB300DB5D1C /* NewGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				A8147E20222FCA1400705540 /* GroupsViewController.swift */,
 				A8147E1E222FC9F300705540 /* GroupsViewCell.swift */,
 				A8147E22222FD17B00705540 /* OtherGroupsViewController.swift */,
+				A8C5691C2232AF9A00DB5D1C /* NewGroupViewCell.swift */,
+				A8C5691E2232AFB300DB5D1C /* NewGroupViewController.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -169,6 +175,8 @@
 				A8C2A1B3222807C3009535F1 /* LoginViewController.swift in Sources */,
 				A8147E1B222FB13300705540 /* FriendsViewController.swift in Sources */,
 				A8147E23222FD17B00705540 /* OtherGroupsViewController.swift in Sources */,
+				A8C5691D2232AF9A00DB5D1C /* NewGroupViewCell.swift in Sources */,
+				A8C5691F2232AFB300DB5D1C /* NewGroupViewController.swift in Sources */,
 				A8147E21222FCA1400705540 /* GroupsViewController.swift in Sources */,
 				A8147E1D222FB16400705540 /* FriendsViewCell.swift in Sources */,
 				A8C2A1A12228076C009535F1 /* AppDelegate.swift in Sources */,
