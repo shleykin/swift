@@ -10,7 +10,14 @@ import UIKit
 
 class GroupsViewController: UITableViewController {
     
-    var groups =    [
+    struct Group {
+        let name : String
+        let image : UIImage
+    }
+    
+    let groups = [Group(name: "Котики", image: #imageLiteral(resourceName: "cats")),Group(name: "Собачки", image: #imageLiteral(resourceName: "dogs")), Group(name: "Лошадки", image: #imageLiteral(resourceName: "horses")),Group(name: "Ёжики", image: #imageLiteral(resourceName: "ezhiki"))]
+    
+    var groups1 =    [
         "Котики",
         "Собачки",
         "Лошадки",
@@ -22,7 +29,7 @@ class GroupsViewController: UITableViewController {
 
 
     }
-    
+/*
     @IBAction func didSelectNewGroup(segue: UIStoryboardSegue) {
         if segue.identifier == "AddGroup" {
             let newgroup = segue.source as! OtherGroupsViewController
@@ -37,7 +44,7 @@ class GroupsViewController: UITableViewController {
             }
         }
     }
-
+*/
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -52,12 +59,13 @@ class GroupsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GroupsViewCell.self), for: indexPath) as! GroupsViewCell
 
         let group = groups[indexPath.row]
-        cell.groupName.text = group
+        cell.groupName.text = group.name
+        cell.groupImage.image = group.image
 
         return cell
     }
  
-
+/*
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -68,7 +76,7 @@ class GroupsViewController: UITableViewController {
         } //else if editingStyle == .insert {}
     }
     
-    
+    */
     
     
     
