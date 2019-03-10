@@ -67,7 +67,7 @@ class GroupsViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } 
     
-    
+    }
     
     
     
