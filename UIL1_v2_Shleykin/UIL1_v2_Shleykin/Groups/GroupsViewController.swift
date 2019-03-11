@@ -10,19 +10,8 @@ import UIKit
 
 class GroupsViewController: UITableViewController {
     
-    struct Group {
-        let name : String
-        let image : UIImage
-    }
+    var groups = [Group(name: "Котики", image: #imageLiteral(resourceName: "cats")),Group(name: "Собачки", image: #imageLiteral(resourceName: "dogs")), Group(name: "Лошадки", image: #imageLiteral(resourceName: "horses")),Group(name: "Ёжики", image: #imageLiteral(resourceName: "ezhiki"))]
     
-    let groups = [Group(name: "Котики", image: #imageLiteral(resourceName: "cats")),Group(name: "Собачки", image: #imageLiteral(resourceName: "dogs")), Group(name: "Лошадки", image: #imageLiteral(resourceName: "horses")),Group(name: "Ёжики", image: #imageLiteral(resourceName: "ezhiki"))]
-    
-    var groups1 =    [
-        "Котики",
-        "Собачки",
-        "Лошадки",
-        "Ёжики"
-        ]
 
     override func viewDidLoad() {
         super.viewDidLoad()

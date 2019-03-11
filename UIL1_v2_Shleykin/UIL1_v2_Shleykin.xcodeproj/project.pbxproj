@@ -11,7 +11,8 @@
 		A8147E1D222FB16400705540 /* FriendsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8147E1C222FB16400705540 /* FriendsViewCell.swift */; };
 		A8147E1F222FC9F300705540 /* GroupsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8147E1E222FC9F300705540 /* GroupsViewCell.swift */; };
 		A8147E21222FCA1400705540 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8147E20222FCA1400705540 /* GroupsViewController.swift */; };
-		A8147E23222FD17B00705540 /* OtherGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8147E22222FD17B00705540 /* OtherGroupsViewController.swift */; };
+		A817C0A52236347500C41BAB /* OtherGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817C0A42236347500C41BAB /* OtherGroupsViewController.swift */; };
+		A817C0A7223649DD00C41BAB /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817C0A6223649DD00C41BAB /* models.swift */; };
 		A8C2A1A12228076C009535F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C2A1A02228076C009535F1 /* AppDelegate.swift */; };
 		A8C2A1A62228076C009535F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C2A1A42228076C009535F1 /* Main.storyboard */; };
 		A8C2A1A82228076D009535F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C2A1A72228076D009535F1 /* Assets.xcassets */; };
@@ -24,7 +25,8 @@
 		A8147E1C222FB16400705540 /* FriendsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewCell.swift; sourceTree = "<group>"; };
 		A8147E1E222FC9F300705540 /* GroupsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewCell.swift; sourceTree = "<group>"; };
 		A8147E20222FCA1400705540 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
-		A8147E22222FD17B00705540 /* OtherGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherGroupsViewController.swift; sourceTree = "<group>"; };
+		A817C0A42236347500C41BAB /* OtherGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherGroupsViewController.swift; sourceTree = "<group>"; };
+		A817C0A6223649DD00C41BAB /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 		A8C2A19D2228076C009535F1 /* UIL1_v2_Shleykin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIL1_v2_Shleykin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C2A1A02228076C009535F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C2A1A52228076C009535F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 			children = (
 				A8147E20222FCA1400705540 /* GroupsViewController.swift */,
 				A8147E1E222FC9F300705540 /* GroupsViewCell.swift */,
-				A8147E22222FD17B00705540 /* OtherGroupsViewController.swift */,
+				A817C0A42236347500C41BAB /* OtherGroupsViewController.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -83,6 +85,7 @@
 		A8C2A19F2228076C009535F1 /* UIL1_v2_Shleykin */ = {
 			isa = PBXGroup;
 			children = (
+				A817C0A6223649DD00C41BAB /* models.swift */,
 				A8147E19222FAD6200705540 /* Groups */,
 				A8147E18222FAD5000705540 /* Friends */,
 				A8C2A1A02228076C009535F1 /* AppDelegate.swift */,
@@ -168,7 +171,8 @@
 			files = (
 				A8C2A1B3222807C3009535F1 /* LoginViewController.swift in Sources */,
 				A8147E1B222FB13300705540 /* FriendsViewController.swift in Sources */,
-				A8147E23222FD17B00705540 /* OtherGroupsViewController.swift in Sources */,
+				A817C0A52236347500C41BAB /* OtherGroupsViewController.swift in Sources */,
+				A817C0A7223649DD00C41BAB /* models.swift in Sources */,
 				A8147E21222FCA1400705540 /* GroupsViewController.swift in Sources */,
 				A8147E1D222FB16400705540 /* FriendsViewCell.swift in Sources */,
 				A8C2A1A12228076C009535F1 /* AppDelegate.swift in Sources */,
