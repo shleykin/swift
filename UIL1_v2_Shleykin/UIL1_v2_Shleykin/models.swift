@@ -12,3 +12,9 @@ public struct Group : Equatable {
     let name : String
     let image : UIImage
 }
+
+
+struct Friend : Equatable {
+    let name : String
+    let image : UIImage
+}
