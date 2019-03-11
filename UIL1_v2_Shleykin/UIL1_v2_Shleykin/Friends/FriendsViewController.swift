@@ -11,22 +11,13 @@ import UIKit
 class FriendsViewController: UITableViewController {
     
     var friends = [Friend(name:"Иван Иванов",image: #imageLiteral(resourceName: "2")),Friend(name: "Петр Петров", image: #imageLiteral(resourceName: "1")),Friend(name: "Олег Олегов", image: #imageLiteral(resourceName: "3")),Friend(name: "Артем Артемов", image: #imageLiteral(resourceName: "4")),Friend(name: "Алексей Алексеев", image: #imageLiteral(resourceName: "5"))]
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 

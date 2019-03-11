@@ -24,16 +24,9 @@ class AvatarViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-
-
-
 }
 
-
 extension AvatarViewController: UICollectionViewDataSource {
-
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: AvatarCollectionViewCell.self), for: indexPath) as! AvatarCollectionViewCell
         cell.imageView.image = friend?.image
