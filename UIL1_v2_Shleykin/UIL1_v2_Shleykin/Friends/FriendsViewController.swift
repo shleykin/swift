@@ -10,7 +10,7 @@ import UIKit
 
 class FriendsViewController: UITableViewController {
     
-    var friends =    [Friend(name:"Иван Иванов",image: #imageLiteral(resourceName: "2")),Friend(name: "Петр Петров", image: #imageLiteral(resourceName: "1")),Friend(name: "Олег Олегов", image: #imageLiteral(resourceName: "3")),Friend(name: "Артем Артемов", image: #imageLiteral(resourceName: "4")),Friend(name: "Алексей Алексеев", image: #imageLiteral(resourceName: "5"))]
+    var friends = [Friend(name:"Иван Иванов",image: #imageLiteral(resourceName: "2")),Friend(name: "Петр Петров", image: #imageLiteral(resourceName: "1")),Friend(name: "Олег Олегов", image: #imageLiteral(resourceName: "3")),Friend(name: "Артем Артемов", image: #imageLiteral(resourceName: "4")),Friend(name: "Алексей Алексеев", image: #imageLiteral(resourceName: "5"))]
 
 
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class FriendsViewController: UITableViewController {
 
         let friend = friends[indexPath.row]
         cell.friendName.text = friend.name
-        //cell.friendImage.image = friend.image
+        cell.friendImage.image = friend.image
 
         return cell
     }

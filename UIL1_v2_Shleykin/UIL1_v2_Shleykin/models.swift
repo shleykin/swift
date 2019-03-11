@@ -14,7 +14,7 @@ public struct Group : Equatable {
 }
 
 
-struct Friend : Equatable {
+public struct Friend : Equatable {
     let name : String
     let image : UIImage
 }

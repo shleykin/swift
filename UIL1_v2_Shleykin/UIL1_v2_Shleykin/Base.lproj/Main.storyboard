@@ -300,6 +300,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="friendImage" destination="uQZ-Cd-SkU" id="H9H-jG-JsM"/>
                                     <outlet property="friendName" destination="1Bw-e4-gZP" id="Ie5-r7-msd"/>
                                 </connections>
                             </tableViewCell>

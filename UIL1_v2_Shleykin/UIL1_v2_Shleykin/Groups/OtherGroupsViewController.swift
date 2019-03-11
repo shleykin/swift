@@ -24,8 +24,7 @@ class OtherGroupsViewController: UIViewController {
 
     }
     
- 
-    
+
 }
 extension OtherGroupsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
