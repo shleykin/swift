@@ -302,6 +302,7 @@
                                 <connections>
                                     <outlet property="friendImage" destination="uQZ-Cd-SkU" id="H9H-jG-JsM"/>
                                     <outlet property="friendName" destination="1Bw-e4-gZP" id="Ie5-r7-msd"/>
+                                    <segue destination="ryy-4b-WHO" kind="show" identifier="UserPhotosSegue" id="LMq-hm-Wao"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -316,10 +317,10 @@
             </objects>
             <point key="canvasLocation" x="1656.8" y="-205.54722638680661"/>
         </scene>
-        <!--View Controller-->
+        <!--Avatar View Controller-->
         <scene sceneID="Y4o-VZ-qK3">
             <objects>
-                <viewController id="ryy-4b-WHO" sceneMemberID="viewController">
+                <viewController id="ryy-4b-WHO" customClass="AvatarViewController" customModule="UIL1_v2_Shleykin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7DW-do-sbD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,7 +339,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wyK-Ru-J4L">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AvatarCollectionViewCell" id="wyK-Ru-J4L" customClass="AvatarCollectionViewCell" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="235" height="251"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -356,8 +357,15 @@
                                             <constraint firstItem="MfW-hM-lrP" firstAttribute="top" secondItem="wyK-Ru-J4L" secondAttribute="top" id="XFN-dy-o45"/>
                                             <constraint firstAttribute="trailing" secondItem="MfW-hM-lrP" secondAttribute="trailing" id="yAp-JN-eDN"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="MfW-hM-lrP" id="eLH-7S-CCX"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ryy-4b-WHO" id="TBe-h9-nhe"/>
+                                    <outlet property="delegate" destination="ryy-4b-WHO" id="z2L-1S-Y1N"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -367,6 +375,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hIa-Zp-RFJ"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="obA-Ar-s0L" id="R02-4R-rwt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fp-eN-acg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

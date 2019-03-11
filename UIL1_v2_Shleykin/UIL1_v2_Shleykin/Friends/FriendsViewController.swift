@@ -46,7 +46,16 @@ class FriendsViewController: UITableViewController {
     }
     
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "UserPhotosSegue"){
+            let destinationController = segue.destination as! AvatarViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                destinationController.friend = friends[indexPath.row]
+            }
+        }
+        
+    }
     
     
     
