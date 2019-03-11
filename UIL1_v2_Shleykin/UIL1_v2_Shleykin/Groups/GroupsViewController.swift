@@ -24,9 +24,9 @@ class GroupsViewController: UITableViewController {
             let newgroup = segue.source as! OtherGroupsViewController
             
             if let indexPath = newgroup.tableView.indexPathForSelectedRow {
-                let group = newgroup.otherGroups[indexPath.row]
+                let group = otherGroups[indexPath.row]
                 groups.append(group)
-                newgroup.otherGroups.remove(at: indexPath.row)
+                otherGroups.remove(at: indexPath.row)
                 tableView.reloadData()
 
             }
@@ -53,7 +53,7 @@ class GroupsViewController: UITableViewController {
         return cell
     }
  
-/*
+
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -64,7 +64,7 @@ class GroupsViewController: UITableViewController {
         } //else if editingStyle == .insert {}
     }
     
-    */
+    
     
     
     
