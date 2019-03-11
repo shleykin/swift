@@ -10,25 +10,20 @@ import UIKit
 
 class GroupsViewController: UITableViewController {
     
-    var groups =    [
-        "Котики",
-        "Собачки",
-        "Лошадки",
-        "Ёжики"
-        ]
+    var groups = [Group(name: "Котики", image: #imageLiteral(resourceName: "cats")),Group(name: "Собачки", image: #imageLiteral(resourceName: "dogs")), Group(name: "Лошадки", image: #imageLiteral(resourceName: "horses")),Group(name: "Ёжики", image: #imageLiteral(resourceName: "ezhiki"))]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
 
     }
-    
+
     @IBAction func didSelectNewGroup(segue: UIStoryboardSegue) {
         if segue.identifier == "AddGroup" {
             let newgroup = segue.source as! OtherGroupsViewController
             
             if let indexPath = newgroup.tableView.indexPathForSelectedRow {
-                //let group = newgroup.otherGroups[indexPath.row]
                 let group = otherGroups[indexPath.row]
                 groups.append(group)
                 otherGroups.remove(at: indexPath.row)
@@ -52,7 +47,8 @@ class GroupsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GroupsViewCell.self), for: indexPath) as! GroupsViewCell
 
         let group = groups[indexPath.row]
-        cell.groupName.text = group
+        cell.groupName.text = group.name
+        cell.groupImage.image = group.image
 
         return cell
     }

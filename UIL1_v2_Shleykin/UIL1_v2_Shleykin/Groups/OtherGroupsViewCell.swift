@@ -1,18 +1,17 @@
 //
-//  FriendsViewCell.swift
+//  OtherGroupsViewCell.swift
 //  UIL1_v2_Shleykin
 //
-//  Created by Ivan Shleykin on 06/03/2019.
+//  Created by Ivan Shleykin on 11/03/2019.
 //  Copyright © 2019 Ivan Shleykin. All rights reserved.
 //
 
 import UIKit
 
-class FriendsViewCell: UITableViewCell {
+class OtherGroupsViewCell: UITableViewCell {
 
-
-    @IBOutlet weak var friendImage: UIImageView!
-    @IBOutlet weak var friendName: UILabel!
+    @IBOutlet weak var otherGroupImage: UIImageView!
+    @IBOutlet weak var otherGroupName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

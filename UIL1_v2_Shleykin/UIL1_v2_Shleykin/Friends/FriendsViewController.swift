@@ -10,15 +10,8 @@ import UIKit
 
 class FriendsViewController: UITableViewController {
     
-    var friends =    [
-        "Иван Иванов",
-        "Петр Петров",
-        "Олег Олегов",
-        "Артем Артемов",
-        "Алексей Алексеев",
-    ]
-    
-    
+    var friends = [Friend(name:"Иван Иванов",image: #imageLiteral(resourceName: "2")),Friend(name: "Петр Петров", image: #imageLiteral(resourceName: "1")),Friend(name: "Олег Олегов", image: #imageLiteral(resourceName: "3")),Friend(name: "Артем Артемов", image: #imageLiteral(resourceName: "4")),Friend(name: "Алексей Алексеев", image: #imageLiteral(resourceName: "5"))]
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +39,39 @@ class FriendsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendsViewCell
 
         let friend = friends[indexPath.row]
-        cell.friendName.text = friend
+        cell.friendName.text = friend.name
+        cell.friendImage.image = friend.image
 
         return cell
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "UserPhotosSegue"){
+            let destinationController = segue.destination as! AvatarViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                destinationController.friend = friends[indexPath.row]
+            }
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     /*
