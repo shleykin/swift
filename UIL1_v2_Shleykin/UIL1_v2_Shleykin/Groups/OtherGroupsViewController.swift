@@ -14,24 +14,20 @@ public var otherGroups = [Group(name:"Металлисты",image: #imageLiteral
 
 class OtherGroupsViewController: UIViewController {
     
-
+    
     
     @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
-<<<<<<< HEAD
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-=======
-
+    
 }
 extension OtherGroupsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
->>>>>>> UIL3_ver3
         return otherGroups.count
     }
     
