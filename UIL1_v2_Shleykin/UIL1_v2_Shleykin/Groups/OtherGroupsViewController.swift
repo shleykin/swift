@@ -10,9 +10,11 @@
 
 import UIKit
 
-class OtherGroupsViewController: UIViewController {
 
-    var otherGroups = [Group(name:"Металлисты",image: #imageLiteral(resourceName: "metal")), Group(name: "Рэперы", image: #imageLiteral(resourceName: "rap")),Group(name: "Фолк", image: #imageLiteral(resourceName: "folk"))]
+
+class OtherGroupsViewController: UIViewController {
+    
+var otherGroups = [Group(name:"Металлисты",image: #imageLiteral(resourceName: "metal")), Group(name: "Рэперы", image: #imageLiteral(resourceName: "rap")),Group(name: "Фолк", image: #imageLiteral(resourceName: "folk"))]
     
     @IBOutlet weak var tableView: UITableView!
     

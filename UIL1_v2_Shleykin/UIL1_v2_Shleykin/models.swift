@@ -8,7 +8,7 @@
 import UIKit
 import Foundation
 
-struct Group : Equatable {
+public struct Group : Equatable {
     let name : String
     let image : UIImage
 }

@@ -18,22 +18,21 @@ class GroupsViewController: UITableViewController {
 
 
     }
-/*
+
     @IBAction func didSelectNewGroup(segue: UIStoryboardSegue) {
         if segue.identifier == "AddGroup" {
             let newgroup = segue.source as! OtherGroupsViewController
             
             if let indexPath = newgroup.tableView.indexPathForSelectedRow {
-                //let group = newgroup.otherGroups[indexPath.row]
-                let group = otherGroups[indexPath.row]
+                let group = newgroup.otherGroups[indexPath.row]
                 groups.append(group)
-                otherGroups.remove(at: indexPath.row)
+                newgroup.otherGroups.remove(at: indexPath.row)
                 tableView.reloadData()
 
             }
         }
     }
-*/
+
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
