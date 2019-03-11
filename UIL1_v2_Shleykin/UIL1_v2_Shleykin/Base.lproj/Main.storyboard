@@ -198,17 +198,19 @@
                                                         <constraint firstAttribute="width" constant="43.5" id="aT2-wE-KhW"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20s-9c-rcW">
-                                                    <rect key="frame" x="72.5" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20s-9c-rcW">
+                                                    <rect key="frame" x="72.5" y="-9" width="42" height="61.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="20s-9c-rcW" firstAttribute="centerY" secondItem="exF-gI-IU9" secondAttribute="centerY" id="06w-ZI-Kmb"/>
                                                 <constraint firstItem="exF-gI-IU9" firstAttribute="leading" secondItem="WFQ-6h-GoE" secondAttribute="leading" constant="10" id="8UU-Gz-00l"/>
                                                 <constraint firstAttribute="bottom" secondItem="exF-gI-IU9" secondAttribute="bottom" id="9Og-Qf-ZKT"/>
                                                 <constraint firstItem="20s-9c-rcW" firstAttribute="leading" secondItem="exF-gI-IU9" secondAttribute="trailing" constant="19" id="a7W-bd-DMy"/>
+                                                <constraint firstItem="20s-9c-rcW" firstAttribute="top" secondItem="WFQ-6h-GoE" secondAttribute="topMargin" constant="-20" id="oMA-Vo-IQc"/>
                                                 <constraint firstItem="exF-gI-IU9" firstAttribute="top" secondItem="WFQ-6h-GoE" secondAttribute="top" id="tFJ-lM-VL5"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -273,12 +275,12 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="IDY-7F-ysz" customClass="FriendsViewCell" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IDY-7F-ysz" id="JYG-kk-GOd">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IDY-7F-ysz" id="JYG-kk-GOd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bw-e4-gZP">
-                                            <rect key="frame" x="73" y="5" width="42" height="33"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bw-e4-gZP">
+                                            <rect key="frame" x="73" y="5.5" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -296,6 +298,7 @@
                                         <constraint firstItem="uQZ-Cd-SkU" firstAttribute="leading" secondItem="JYG-kk-GOd" secondAttribute="leading" constant="10" id="Mvb-or-lla"/>
                                         <constraint firstItem="1Bw-e4-gZP" firstAttribute="leading" secondItem="uQZ-Cd-SkU" secondAttribute="trailing" constant="20" id="WCH-XF-LKg"/>
                                         <constraint firstItem="uQZ-Cd-SkU" firstAttribute="top" secondItem="JYG-kk-GOd" secondAttribute="top" id="hPg-K0-MfX"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1Bw-e4-gZP" secondAttribute="bottom" constant="-5" id="wOY-Nx-Qkx"/>
                                         <constraint firstItem="1Bw-e4-gZP" firstAttribute="centerY" secondItem="JYG-kk-GOd" secondAttribute="centerY" id="wdc-E3-IfV"/>
                                     </constraints>
                                 </tableViewCellContentView>
