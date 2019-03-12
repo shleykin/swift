@@ -16,6 +16,8 @@ class OtherGroupsViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        otherGroupImage.layer.cornerRadius = otherGroupImage.frame.height / 2
+        otherGroupImage.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
