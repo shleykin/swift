@@ -19,7 +19,10 @@ class FriendsViewCell: UITableViewCell {
         // Initialization code
         
         friendImage.layer.cornerRadius = friendImage.frame.height / 2
-        friendImage.clipsToBounds = true
+       //friendImage.clipsToBounds = true
+        friendImage.layer.shadowRadius = 4.0
+        friendImage.layer.shadowOpacity = 1
+        friendImage.layer.shadowOffset = CGSize.zero
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
