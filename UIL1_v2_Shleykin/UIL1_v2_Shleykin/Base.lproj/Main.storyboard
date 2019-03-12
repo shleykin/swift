@@ -285,7 +285,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uQZ-Cd-SkU">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uQZ-Cd-SkU" customClass="IconAvatar" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="43" height="43"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="43" id="6p4-Wy-S3v"/>
