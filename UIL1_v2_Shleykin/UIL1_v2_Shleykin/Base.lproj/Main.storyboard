@@ -280,12 +280,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bw-e4-gZP">
-                                            <rect key="frame" x="73" y="5.5" width="42" height="20.5"/>
+                                            <rect key="frame" x="73" y="5.5" width="42" height="32"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uQZ-Cd-SkU" customClass="IconAvatar" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xRJ-xM-CmJ" customClass="shadowView" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="0.0" width="43" height="43"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43" id="BvV-6N-Rk2"/>
+                                                <constraint firstAttribute="width" constant="43" id="w0W-eD-Ns8"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uQZ-Cd-SkU">
                                             <rect key="frame" x="10" y="0.0" width="43" height="43"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="43" id="6p4-Wy-S3v"/>
@@ -307,9 +314,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="uQZ-Cd-SkU" secondAttribute="bottom" id="7Ww-kL-BfQ"/>
+                                        <constraint firstItem="xRJ-xM-CmJ" firstAttribute="leading" secondItem="JYG-kk-GOd" secondAttribute="leading" constant="10" id="FEE-ev-ugo"/>
                                         <constraint firstItem="uQZ-Cd-SkU" firstAttribute="leading" secondItem="JYG-kk-GOd" secondAttribute="leading" constant="10" id="Mvb-or-lla"/>
                                         <constraint firstItem="1Bw-e4-gZP" firstAttribute="leading" secondItem="uQZ-Cd-SkU" secondAttribute="trailing" constant="20" id="WCH-XF-LKg"/>
+                                        <constraint firstAttribute="bottom" secondItem="xRJ-xM-CmJ" secondAttribute="bottom" id="b17-sH-yuM"/>
                                         <constraint firstItem="uQZ-Cd-SkU" firstAttribute="top" secondItem="JYG-kk-GOd" secondAttribute="top" id="hPg-K0-MfX"/>
+                                        <constraint firstItem="xRJ-xM-CmJ" firstAttribute="top" secondItem="JYG-kk-GOd" secondAttribute="top" id="twg-mT-43I"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="1Bw-e4-gZP" secondAttribute="bottom" constant="-5" id="wOY-Nx-Qkx"/>
                                         <constraint firstItem="1Bw-e4-gZP" firstAttribute="centerY" secondItem="JYG-kk-GOd" secondAttribute="centerY" id="wdc-E3-IfV"/>
                                     </constraints>
