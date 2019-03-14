@@ -13,9 +13,9 @@
 		A8147E21222FCA1400705540 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8147E20222FCA1400705540 /* GroupsViewController.swift */; };
 		A817C0A52236347500C41BAB /* OtherGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817C0A42236347500C41BAB /* OtherGroupsViewController.swift */; };
 		A817C0A7223649DD00C41BAB /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817C0A6223649DD00C41BAB /* models.swift */; };
-		A81CC3152237D3C200ACD333 /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81CC3142237D3C200ACD333 /* LikeView.swift */; };
 		A83F5CFD22392A020061F9B3 /* shadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83F5CFC22392A020061F9B3 /* shadowView.swift */; };
 		A877D5BE2236770E00D26FFB /* OtherGroupsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877D5BD2236770E00D26FFB /* OtherGroupsViewCell.swift */; };
+		A89832F1223A990F00033491 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89832F0223A990F00033491 /* LikeControl.swift */; };
 		A8C2A1A12228076C009535F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C2A1A02228076C009535F1 /* AppDelegate.swift */; };
 		A8C2A1A62228076C009535F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C2A1A42228076C009535F1 /* Main.storyboard */; };
 		A8C2A1A82228076D009535F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C2A1A72228076D009535F1 /* Assets.xcassets */; };
@@ -32,9 +32,9 @@
 		A8147E20222FCA1400705540 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		A817C0A42236347500C41BAB /* OtherGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherGroupsViewController.swift; sourceTree = "<group>"; };
 		A817C0A6223649DD00C41BAB /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
-		A81CC3142237D3C200ACD333 /* LikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
 		A83F5CFC22392A020061F9B3 /* shadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shadowView.swift; sourceTree = "<group>"; };
 		A877D5BD2236770E00D26FFB /* OtherGroupsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherGroupsViewCell.swift; sourceTree = "<group>"; };
+		A89832F0223A990F00033491 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		A8C2A19D2228076C009535F1 /* UIL1_v2_Shleykin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIL1_v2_Shleykin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C2A1A02228076C009535F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8C2A1A52228076C009535F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,8 +64,8 @@
 				A8147E1C222FB16400705540 /* FriendsViewCell.swift */,
 				A8ECB0632236829600514BD7 /* AvatarCollectionViewCell.swift */,
 				A8ECB0652236834400514BD7 /* AvatarViewController.swift */,
-				A81CC3142237D3C200ACD333 /* LikeView.swift */,
 				A83F5CFC22392A020061F9B3 /* shadowView.swift */,
+				A89832F0223A990F00033491 /* LikeControl.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -193,8 +193,8 @@
 				A817C0A7223649DD00C41BAB /* models.swift in Sources */,
 				A8147E21222FCA1400705540 /* GroupsViewController.swift in Sources */,
 				A8147E1D222FB16400705540 /* FriendsViewCell.swift in Sources */,
+				A89832F1223A990F00033491 /* LikeControl.swift in Sources */,
 				A83F5CFD22392A020061F9B3 /* shadowView.swift in Sources */,
-				A81CC3152237D3C200ACD333 /* LikeView.swift in Sources */,
 				A8C2A1A12228076C009535F1 /* AppDelegate.swift in Sources */,
 				A8147E1F222FC9F300705540 /* GroupsViewCell.swift in Sources */,
 			);

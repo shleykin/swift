@@ -9,6 +9,8 @@
 import UIKit
 
 class AvatarViewController: UIViewController {
+    
+    let likeControl = LikeControl(frame: CGRect(x: 10, y: 10, width: 20, height: 30))
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -23,6 +25,19 @@ class AvatarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+            view.addSubview(likeControl)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 }
 

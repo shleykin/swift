@@ -392,7 +392,7 @@
                                     <outlet property="delegate" destination="ryy-4b-WHO" id="z2L-1S-Y1N"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJp-WV-sjn" customClass="LikeView" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJp-WV-sjn" customClass="LikeControl" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
                                 <rect key="frame" x="112.5" y="459.5" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
