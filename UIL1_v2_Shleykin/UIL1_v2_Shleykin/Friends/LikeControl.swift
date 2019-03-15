@@ -8,12 +8,18 @@
 
 import UIKit
 
-class LikeControl: UIControl {
+let kLikeSize: CGFloat = 40
+let button = UIButton()
+var valueLabel: UILabel!
+var value: Int = 0
 
+class LikeControl: UIControl {
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         setUpButton()
     }
     
@@ -23,15 +29,27 @@ class LikeControl: UIControl {
     }
     
     private func setUpButton () {
-        let button = UIButton()
-        button.backgroundColor = UIColor.blue
+        
+
+        button.setImage(#imageLiteral(resourceName: "like"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "liketapped"), for: .selected)
+        
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        button.heightAnchor.constraint(equalToConstant: kLikeSize).isActive = true
+        button.widthAnchor.constraint(equalToConstant: kLikeSize).isActive = true
+        button.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
         
         addSubview(button)
         
+    }
+    
+   
+    @objc func likeButtonTapped () {
+        print("LikeButton Tapped")
+        
+        button.isSelected = !button.isSelected
+        print("\(button.isSelected)")
     }
 
 }

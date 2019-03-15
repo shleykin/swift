@@ -10,7 +10,7 @@ import UIKit
 
 class AvatarViewController: UIViewController {
     
-    let likeControl = LikeControl(frame: CGRect(x: 10, y: 10, width: 20, height: 30))
+    //let likeControl = LikeControl(frame: CGRect(x: 10, y: 10, width: 20, height: 30))
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -26,17 +26,7 @@ class AvatarViewController: UIViewController {
         super.viewDidLoad()
 
         
-            view.addSubview(likeControl)
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            //view.addSubview(likeControl)
         
     }
 }
