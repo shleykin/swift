@@ -19,7 +19,6 @@ class LikeControl: UIControl {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         setUpButton()
     }
     
@@ -30,38 +29,33 @@ class LikeControl: UIControl {
     
     private func setUpButton () {
         
-
         button.setImage(#imageLiteral(resourceName: "like"), for: .normal)
         button.setImage(#imageLiteral(resourceName: "liketapped"), for: .selected)
         
-        
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.heightAnchor.constraint(equalToConstant: kLikeSize).isActive = true
-        button.widthAnchor.constraint(equalToConstant: kLikeSize).isActive = true
         button.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
         
-        addSubview(button)
         likeCountLabel.translatesAutoresizingMaskIntoConstraints = false
-        likeCountLabel.heightAnchor.constraint(equalToConstant: kLikeSize).isActive = true
-        likeCountLabel.widthAnchor.constraint(equalToConstant: kLikeSize).isActive = true
-        likeCountLabel.font = UIFont.systemFont(ofSize: 25)
+        likeCountLabel.font = UIFont.systemFont(ofSize: kLikeSize * 0.5)
         likeCountLabel.text = "\(likeCount)"
-        
+
+        addSubview(button)
         addSubview(likeCountLabel)
         
     }
     
    
     @objc func likeButtonTapped () {
-        print("LikeButton Tapped")
-        
         button.isSelected = !button.isSelected
         likeCount = button.isSelected ? (likeCount + 1) : (likeCount - 1)
-        likeCountLabel.textColor = button.isSelected ? (.red ) : (.black)
+        likeCountLabel.textColor = button.isSelected ? .red  : .black
         
-        print("\(button.isSelected)")
-        print("\(likeCount)")
         setUpButton()
+        
+        //print("LikeButton Tapped")
+        //print("\(button.isSelected)")
+        //print("\(likeCount)")
+        
     }
 
 }
