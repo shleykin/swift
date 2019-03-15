@@ -1,16 +1,16 @@
 //
-//  shadowView.swift
+//  Shadow.swift
 //  UIL1_v2_Shleykin
 //
-//  Created by Ivan Shleykin on 13/03/2019.
+//  Created by Ivan Shleykin on 15/03/2019.
 //  Copyright © 2019 Ivan Shleykin. All rights reserved.
 //
 
 import UIKit
 
-class shadowView: UIImageView {
-
-
+class Shadow: UIImageView {
+    
+    
     override func awakeFromNib() {
         layer.shadowRadius = 4.0
         layer.shadowOpacity = 1

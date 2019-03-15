@@ -285,7 +285,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xRJ-xM-CmJ" customClass="shadowView" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xRJ-xM-CmJ" customClass="Shadow" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
                                             <rect key="frame" x="10" y="0.0" width="43" height="43"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="43" id="BvV-6N-Rk2"/>
@@ -393,11 +393,11 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJp-WV-sjn" customClass="LikeControl" customModule="UIL1_v2_Shleykin" customModuleProvider="target">
-                                <rect key="frame" x="112.5" y="459.5" width="150" height="150"/>
+                                <rect key="frame" x="147.5" y="459.5" width="80" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="DAH-2H-DQw"/>
-                                    <constraint firstAttribute="height" constant="150" id="SM8-UB-KzU"/>
+                                    <constraint firstAttribute="width" constant="80" id="DAH-2H-DQw"/>
+                                    <constraint firstAttribute="height" constant="42" id="SM8-UB-KzU"/>
                                 </constraints>
                             </view>
                         </subviews>
