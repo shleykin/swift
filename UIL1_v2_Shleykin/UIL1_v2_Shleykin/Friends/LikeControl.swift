@@ -10,8 +10,8 @@ import UIKit
 
 let kLikeSize: CGFloat = 40
 let button = UIButton()
-var valueLabel: UILabel!
-var value: Int = 0
+var likeCountLabel = UILabel()
+var likeCount: Int = 0
 
 class LikeControl: UIControl {
     
@@ -41,6 +41,13 @@ class LikeControl: UIControl {
         button.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
         
         addSubview(button)
+        likeCountLabel.translatesAutoresizingMaskIntoConstraints = false
+        likeCountLabel.heightAnchor.constraint(equalToConstant: kLikeSize).isActive = true
+        likeCountLabel.widthAnchor.constraint(equalToConstant: kLikeSize).isActive = true
+        likeCountLabel.font = UIFont.systemFont(ofSize: 25)
+        likeCountLabel.text = "\(likeCount)"
+        
+        addSubview(likeCountLabel)
         
     }
     
@@ -49,7 +56,12 @@ class LikeControl: UIControl {
         print("LikeButton Tapped")
         
         button.isSelected = !button.isSelected
+        likeCount = button.isSelected ? (likeCount + 1) : (likeCount - 1)
+        likeCountLabel.textColor = button.isSelected ? (.red ) : (.black)
+        
         print("\(button.isSelected)")
+        print("\(likeCount)")
+        setUpButton()
     }
 
 }

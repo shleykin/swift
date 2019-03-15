@@ -371,17 +371,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="235" height="251"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MfW-hM-lrP">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MfW-hM-lrP">
                                                     <rect key="frame" x="0.0" y="0.0" width="235" height="251"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="MfW-hM-lrP" secondAttribute="bottom" id="GHW-e3-Tg9"/>
-                                            <constraint firstItem="MfW-hM-lrP" firstAttribute="leading" secondItem="wyK-Ru-J4L" secondAttribute="leading" id="Jk4-Ah-YV3"/>
-                                            <constraint firstItem="MfW-hM-lrP" firstAttribute="top" secondItem="wyK-Ru-J4L" secondAttribute="top" id="XFN-dy-o45"/>
-                                            <constraint firstAttribute="trailing" secondItem="MfW-hM-lrP" secondAttribute="trailing" id="yAp-JN-eDN"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="MfW-hM-lrP" id="eLH-7S-CCX"/>
                                         </connections>
