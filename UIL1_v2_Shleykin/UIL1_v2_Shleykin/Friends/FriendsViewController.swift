@@ -10,15 +10,17 @@ import UIKit
 
 class FriendsViewController: UITableViewController {
     
-    var friends = [Friend(name:"Иван Иванов",image: #imageLiteral(resourceName: "2")),Friend(name: "Петр Петров", image: #imageLiteral(resourceName: "1")),Friend(name: "Олег Олегов", image: #imageLiteral(resourceName: "3")),Friend(name: "Артем Артемов", image: #imageLiteral(resourceName: "4")),Friend(name: "Алексей Алексеев", image: #imageLiteral(resourceName: "5"))]
+    var friends = [Friend(name:"Иванов Иван",image: #imageLiteral(resourceName: "2")),Friend(name: "Петров Петр", image: #imageLiteral(resourceName: "1")),Friend(name: "Олегов Олег", image: #imageLiteral(resourceName: "3")),Friend(name: "Артемов Артем", image: #imageLiteral(resourceName: "4")),Friend(name: "Алексеев Алексей", image: #imageLiteral(resourceName: "5"))]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UINib(nibName: "FriendsHeader", bundle: Bundle.main ), forHeaderFooterViewReuseIdentifier: "FriendsHeader")
 
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return friends.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +51,12 @@ class FriendsViewController: UITableViewController {
     }
     
     
-    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: "FriendsHeader")
+        header?.backgroundView = UIView()
+        header?.backgroundView?.backgroundColor = .green
+        return header
+    }
     
     
     
