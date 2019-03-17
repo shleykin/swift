@@ -8,14 +8,18 @@
 
 import UIKit
 
-class GroupsViewController: UITableViewController {
+class GroupsViewController: UITableViewController, UISearchBarDelegate {
     
-    var groups = [Group(name: "Котики", image: #imageLiteral(resourceName: "cats")),Group(name: "Собачки", image: #imageLiteral(resourceName: "dogs")), Group(name: "Лошадки", image: #imageLiteral(resourceName: "horses")),Group(name: "Ёжики", image: #imageLiteral(resourceName: "ezhiki"))]
-    
+  
+    let searchController = UISearchController(searchResultsController: nil)
+    var filtredGroup: [Group] = []
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        searchController.searchResultsUpdater = self as? UISearchResultsUpdating
+        tableView.tableHeaderView = searchController.searchBar
 
     }
 
@@ -61,70 +65,108 @@ class GroupsViewController: UITableViewController {
             otherGroups.append(group)
             groups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } //else if editingStyle == .insert {}
+        }
+    }
+
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+       
     }
     
+//    class TableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
+//
+//        private let items = ["Вася", "Света", "Дима", "Рома"]
+//        private var result: [String] = []
+//
+//        private let searchController = UISearchController(searchResultsController: nil)
+//
+//        private var isSearch: Bool { return searchController.active && !searchController.searchBar.text!.isEmpty }
+//
+//        override func viewDidLoad() {
+//            super.viewDidLoad()
+//            searchController.searchResultsUpdater = self
+//            searchController.searchBar.delegate = self
+//            tableView.tableHeaderView = searchController.searchBar
+//        }
+//
+//        override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//            if isSearch {
+//                return result.count
+//            } else {
+//                return items.count
+//            }
+//        }
+//
+//        override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+//
+//            var text: String!
+//
+//            if isSearch {
+//                text = result[indexPath.row]
+//            } else {
+//                text = items[indexPath.row]
+//            }
+//
+//            cell.textLabel?.text = text
+//            return cell
+//        }
+//
+//        // MARK: - SearchResultsUpdating
+//
+//        func updateSearchResultsForSearchController(searchController: UISearchController) {
+//            result = items.filter { $0.lowercaseString.containsString(searchController.searchBar.text!.lowercaseString) }
+//            tableView.reloadData()
+//        }
+//
+//        // MARK: - SearchBarDelegate
+//
+//        func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+//            // Start Editing
+//        }
+//
+//        func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+//            // End Editing
+//        }
+//
+//    }
 
+    //    var groups: [Group] = []
+    //
+    //    override func viewDidLoad() {
+    //        super.viewDidLoad()
+    //
+    //        groups = DemoData.groups
+    //        tableView.reloadData()
+    //
+    //        // Uncomment the following line to preserve selection between presentations
+    //        // self.clearsSelectionOnViewWillAppear = false
+    //
+    //        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    //        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    //    }
+    //}
+    //
+    //// MARK: - Search bar delegate
+    //extension AllGroupsViewController: UISearchBarDelegate {
+    //
+    //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    //        if let searchText = searchBar.text {
+    //            if searchText.isEmpty {
+    //                groups = DemoData.groups
+    //            }else{
+    //                groups = [];
+    //                for group in DemoData.groups {
+    //                    if group.name.range(of: searchText) != nil {
+    //                        groups.append(group)
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        tableView.reloadData()
+    //    }
+    //
+    //}
     
     
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

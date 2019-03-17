@@ -48,6 +48,7 @@ extension OtherGroupsViewController: UITableViewDataSource {
     
     
 }
+// MARK: - SearchBarDelegate
 
 extension OtherGroupsViewController: UISearchBarDelegate {
     
