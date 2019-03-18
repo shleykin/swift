@@ -53,7 +53,7 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
         if(segue.identifier == "UserPhotosSegue"){
             let destinationController = segue.destination as! AvatarViewController
             if let indexPath = tableView.indexPathForSelectedRow {
-                destinationController.friend = friends[indexPath.row]
+                destinationController.friend = filtredFriend[indexPath.row]
             }
         }
         
