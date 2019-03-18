@@ -68,39 +68,4 @@ extension OtherGroupsViewController: UISearchBarDelegate {
     
 }
 
-//    var groups: [Group] = []
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        groups = DemoData.groups
-//        tableView.reloadData()
-//
-//        // Uncomment the following line to preserve selection between presentations
-//        // self.clearsSelectionOnViewWillAppear = false
-//
-//        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-//    }
-//}
-//
-//// MARK: - Search bar delegate
-//extension AllGroupsViewController: UISearchBarDelegate {
-//
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        if let searchText = searchBar.text {
-//            if searchText.isEmpty {
-//                groups = DemoData.groups
-//            }else{
-//                groups = [];
-//                for group in DemoData.groups {
-//                    if group.name.range(of: searchText) != nil {
-//                        groups.append(group)
-//                    }
-//                }
-//            }
-//        }
-//        tableView.reloadData()
-//    }
-//
-//}
+
