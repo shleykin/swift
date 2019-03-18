@@ -421,6 +421,18 @@
                                             <constraint firstAttribute="trailing" secondItem="6vZ-Cq-fYK" secondAttribute="trailing" constant="20" id="ygp-th-4sc"/>
                                             <constraint firstItem="fva-Pv-3en" firstAttribute="top" secondItem="6vZ-Cq-fYK" secondAttribute="bottom" constant="12" id="ztf-OZ-s9G"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="autorImage" destination="foV-Wg-Tmt" id="gBt-UL-HOD"/>
+                                            <outlet property="autorName" destination="YOY-zh-8de" id="W9B-2P-NWu"/>
+                                            <outlet property="bodyNews" destination="pmi-Km-bT1" id="mjf-F6-VfX"/>
+                                            <outlet property="commentImage" destination="fva-Pv-3en" id="9wU-1k-mai"/>
+                                            <outlet property="dateOfPost" destination="oYb-gi-KZc" id="BOV-br-c9s"/>
+                                            <outlet property="heartImage" destination="idb-fx-aKi" id="rDG-sv-iyp"/>
+                                            <outlet property="mainImageNews" destination="6vZ-Cq-fYK" id="xW5-s8-b9n"/>
+                                            <outlet property="shareImage" destination="Rh3-xy-471" id="XYo-DZ-2y5"/>
+                                            <outlet property="viewCountImage" destination="1Qm-a0-0eV" id="f1e-2T-o65"/>
+                                            <outlet property="viewCountLabel" destination="ZAb-Sy-BWH" id="YZY-qM-aV4"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

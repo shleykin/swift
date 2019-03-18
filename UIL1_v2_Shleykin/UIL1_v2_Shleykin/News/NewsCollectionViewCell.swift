@@ -10,4 +10,15 @@ import UIKit
 
 class NewsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var autorImage: UIImageView!
+    
+    @IBOutlet weak var autorName: UILabel!
+    @IBOutlet weak var dateOfPost: UILabel!
+    @IBOutlet weak var bodyNews: UILabel!
+    @IBOutlet weak var mainImageNews: UIImageView!
+    @IBOutlet weak var heartImage: UIImageView!
+    @IBOutlet weak var commentImage: UIImageView!
+    @IBOutlet weak var shareImage: UIImageView!
+    @IBOutlet weak var viewCountImage: UIImageView!
+    @IBOutlet weak var viewCountLabel: UILabel!
 }
