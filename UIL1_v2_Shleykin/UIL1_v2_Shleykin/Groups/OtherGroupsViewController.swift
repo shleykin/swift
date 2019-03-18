@@ -10,12 +10,10 @@
 
 import UIKit
 
-public var otherGroups = [Group(name:"Металлисты",image: #imageLiteral(resourceName: "metal")), Group(name: "Рэперы", image: #imageLiteral(resourceName: "rap")),Group(name: "Фолк", image: #imageLiteral(resourceName: "folk"))]
-
 
 class OtherGroupsViewController: UIViewController {
     
-var groups: [Group] = []
+var groupsFiltred: [Group] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,7 +21,7 @@ var groups: [Group] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        groups = otherGroups
+        groupsFiltred = otherGroups
         tableView.reloadData()
     }
     
@@ -31,7 +29,7 @@ var groups: [Group] = []
 }
 extension OtherGroupsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups.count
+        return groupsFiltred.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,7 +38,7 @@ extension OtherGroupsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OtherGroupsViewCell.self), for: indexPath) as! OtherGroupsViewCell
-        let group = groups[indexPath.row]
+        let group = groupsFiltred[indexPath.row]
         cell.otherGroupName.text = group.name
         cell.otherGroupImage.image = group.image
         return cell
@@ -55,12 +53,12 @@ extension OtherGroupsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let searchText = searchBar.text {
             if searchText.isEmpty {
-                groups = otherGroups
+                groupsFiltred = otherGroups
             }else {
-                groups = [];
+                groupsFiltred = [];
                 for group in otherGroups {
                     if group.name.range(of: searchText) != nil {
-                        groups.append(group)
+                        groupsFiltred.append(group)
                     }
                 }
             }

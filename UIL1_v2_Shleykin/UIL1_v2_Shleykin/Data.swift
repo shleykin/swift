@@ -13,6 +13,8 @@ public var friends = [Friend(name:"Иванов Иван",image: #imageLiteral(r
 
 public var groups = [Group(name: "Котики", image: #imageLiteral(resourceName: "cats")),Group(name: "Собачки", image: #imageLiteral(resourceName: "dogs")), Group(name: "Лошадки", image: #imageLiteral(resourceName: "horses")),Group(name: "Ёжики", image: #imageLiteral(resourceName: "ezhiki"))]
 
+public var otherGroups = [Group(name:"Металлисты",image: #imageLiteral(resourceName: "metal")), Group(name: "Рэперы", image: #imageLiteral(resourceName: "rap")),Group(name: "Фолк", image: #imageLiteral(resourceName: "folk"))]
+
 //public var sortedFriends: Friend = []
 //
 //func sortedFriends 
