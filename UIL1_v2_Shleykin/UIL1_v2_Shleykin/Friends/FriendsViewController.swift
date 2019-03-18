@@ -29,11 +29,12 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return filtredFriend.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filtredFriend.count
+        return section
+        
     }
 
     
