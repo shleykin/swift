@@ -9,7 +9,7 @@
 import UIKit
 
 
-class GroupsViewController: UITableViewController, UISearchBarDelegate {
+class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
 
     
 
@@ -24,7 +24,7 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        searchController.searchResultsUpdater = self as! UISearchResultsUpdating
+        searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         tableView.tableHeaderView = searchController.searchBar
         filtredGroup = groups
@@ -100,9 +100,9 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate {
     }
     
 //
-//    func updateSearchResults(for searchController: UISearchController) {
-//        <#code#>
-//    }
+    func updateSearchResults(for searchController: UISearchController) {
+        tableView.reloadData()
+    }
    
 
 //
