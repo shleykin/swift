@@ -8,8 +8,12 @@
 
 import UIKit
 
-class FriendsViewController: UITableViewController {
+class FriendsViewController: UITableViewController , UISearchBarDelegate, UISearchResultsUpdating {
+
     
+    
+    let searchControllerFriend = UISearchController(searchResultsController: nil)
+    var filtredFriend: [Friend] = []
 
     
     override func viewDidLoad() {
@@ -17,21 +21,26 @@ class FriendsViewController: UITableViewController {
         
         tableView.register(UINib(nibName: "FriendsHeader", bundle: Bundle.main ), forHeaderFooterViewReuseIdentifier: "FriendsHeader")
 
+        searchControllerFriend.searchResultsUpdater = self
+        searchControllerFriend.searchBar.delegate = self
+        tableView.tableHeaderView = searchControllerFriend.searchBar
+        filtredFriend = friends
+        tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return friends.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return filtredFriend.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendsViewCell
 
-        let friend = friends[indexPath.row]
+        let friend = filtredFriend[indexPath.row]
         cell.friendName.text = friend.name
         cell.friendImage.image = friend.image
 
@@ -50,6 +59,33 @@ class FriendsViewController: UITableViewController {
         
     }
     
+//MARK: - SearchBarDelegate
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if let searchText = searchBar.text {
+            if searchText.isEmpty {
+                filtredFriend = friends
+            }else {
+                filtredFriend = [];
+                for friend in friends {
+                    if friend.name.range(of: searchText) != nil {
+                        filtredFriend.append(friend)
+                    }
+                }
+            }
+        }
+        tableView.reloadData()
+    }
+
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        tableView.reloadData()
+    }
+    
+    
+    
+// МАRK: - Header
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableCell(withIdentifier: "FriendsHeader")
@@ -58,63 +94,97 @@ class FriendsViewController: UITableViewController {
         return header
     }
     
+//    class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
+//
+//        let searchController = UISearchController(searchResultsController: nil)
+//        var filtredGroup: [Group] = []
+//
+//
+//        override func viewDidLoad() {
+//            super.viewDidLoad()
+//
+//            searchController.searchResultsUpdater = self
+//            searchController.searchBar.delegate = self
+//            tableView.tableHeaderView = searchController.searchBar
+//            filtredGroup = groups
+//            tableView.reloadData()
+//
+//
+//        }
+//
+//        @IBAction func didSelectNewGroup(segue: UIStoryboardSegue) {
+//            if segue.identifier == "AddGroup" {
+//                let newgroup = segue.source as! OtherGroupsViewController
+//
+//                if let indexPath = newgroup.tableView.indexPathForSelectedRow {
+//                    let group = otherGroups[indexPath.row]
+//                    groups.append(group)
+//                    otherGroups.remove(at: indexPath.row)
+//                    tableView.reloadData()
+//
+//                }
+//            }
+//        }
+//
+//
+//        override func numberOfSections(in tableView: UITableView) -> Int {
+//            return 1
+//        }
+//
+//        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//            return filtredGroup.count
+//
+//        }
+//
+//
+//        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GroupsViewCell.self), for: indexPath) as! GroupsViewCell
+//
+//            let group = filtredGroup[indexPath.row]
+//            cell.groupName.text = group.name
+//            cell.groupImage.image = group.image
+//
+//            return cell
+//        }
+//
+//
+//
+//        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//            if editingStyle == .delete {
+//                let group = filtredGroup[indexPath.row]
+//                otherGroups.append(group)
+//                filtredGroup.remove(at: indexPath.row)
+//                tableView.deleteRows(at: [indexPath], with: .fade)
+//            }
+//        }
+//
+//        // MARK: - SearchBarDelegate
+//
+//
+//        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//            if let searchText = searchBar.text {
+//                if searchText.isEmpty {
+//                    filtredGroup = groups
+//                }else {
+//                    filtredGroup = [];
+//                    for group in groups {
+//                        if group.name.range(of: searchText) != nil {
+//                            filtredGroup.append(group)
+//                        }
+//                    }
+//                }
+//            }
+//            tableView.reloadData()
+//        }
+//
+//        //
+//        func updateSearchResults(for searchController: UISearchController) {
+//            tableView.reloadData()
+//        }
+//
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

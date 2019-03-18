@@ -11,14 +11,8 @@ import UIKit
 
 class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
 
-    
-
-    let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: Int(UIScreen.main.bounds.width), height: 40))
-  
     let searchController = UISearchController(searchResultsController: nil)
     var filtredGroup: [Group] = []
-//    var someGroup: [Group] = []
-//    private var isSearch: Bool { return searchController.isActive && !searchController.searchBar.text!.isEmpty }
 
 
     override func viewDidLoad() {
@@ -29,7 +23,7 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearch
         tableView.tableHeaderView = searchController.searchBar
         filtredGroup = groups
         tableView.reloadData()
-//        view.addSubview(searchBar)
+
 
     }
 
@@ -73,9 +67,9 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearch
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let group = groups[indexPath.row]
+            let group = filtredGroup[indexPath.row]
             otherGroups.append(group)
-            groups.remove(at: indexPath.row)
+            filtredGroup.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

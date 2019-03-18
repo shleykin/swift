@@ -15,6 +15,4 @@ public var groups = [Group(name: "Котики", image: #imageLiteral(resourceNa
 
 public var otherGroups = [Group(name:"Металлисты",image: #imageLiteral(resourceName: "metal")), Group(name: "Рэперы", image: #imageLiteral(resourceName: "rap")),Group(name: "Фолк", image: #imageLiteral(resourceName: "folk"))]
 
-//public var sortedFriends: Friend = []
-//
-//func sortedFriends 
+
