@@ -24,12 +24,12 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        searchController.searchResultsUpdater = self
-//        searchController.searchBar.delegate = self
-//        tableView.tableHeaderView = searchController.searchBar
+//        searchController.searchResultsUpdater = self as! UISearchResultsUpdating
+        searchController.searchBar.delegate = self
+        tableView.tableHeaderView = searchController.searchBar
         filtredGroup = groups
         tableView.reloadData()
-        view.addSubview(searchBar)
+//        view.addSubview(searchBar)
 
     }
 
@@ -53,12 +53,8 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if isSearch {
+
             return filtredGroup.count
-//        } else {
-//            return filtredGroup.count
-//        }
-        
         
     }
 
@@ -66,14 +62,6 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GroupsViewCell.self), for: indexPath) as! GroupsViewCell
 
-
-    
-//        if isSearch {
-//            return someGroup = groups[indexPath.row]
-//        } else {
-//            return someGroup = filtredGroup[indexPath.row]
-//        }
-        
         let group = filtredGroup[indexPath.row]
         cell.groupName.text = group.name
         cell.groupImage.image = group.image
