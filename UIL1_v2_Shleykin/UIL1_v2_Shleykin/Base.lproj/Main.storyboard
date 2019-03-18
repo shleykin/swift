@@ -347,28 +347,28 @@
                                                         <constraint firstAttribute="width" constant="334" id="now-hZ-Dmm"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="idb-fx-aKi">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e-commerce-like-heart" translatesAutoresizingMaskIntoConstraints="NO" id="idb-fx-aKi">
                                                     <rect key="frame" x="20" y="358" width="35" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="gNi-yf-AXv"/>
                                                         <constraint firstAttribute="width" constant="35" id="joZ-gP-fmb"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Qm-a0-0eV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="1Qm-a0-0eV">
                                                     <rect key="frame" x="264" y="358" width="35" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="9Na-Fv-6WL"/>
                                                         <constraint firstAttribute="height" constant="28" id="GvZ-UC-pby"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fva-Pv-3en">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment_baloon-512" translatesAutoresizingMaskIntoConstraints="NO" id="fva-Pv-3en">
                                                     <rect key="frame" x="75" y="358" width="35" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="7aj-c2-soj"/>
                                                         <constraint firstAttribute="height" constant="28" id="exQ-Qp-be7"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rh3-xy-471">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resend" translatesAutoresizingMaskIntoConstraints="NO" id="Rh3-xy-471">
                                                     <rect key="frame" x="130" y="358" width="35" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="MHc-oe-cqy"/>
@@ -619,7 +619,11 @@
     </scenes>
     <resources>
         <image name="VKIcon" width="768" height="768"/>
+        <image name="comment_baloon-512" width="512" height="512"/>
+        <image name="e-commerce-like-heart" width="384" height="384"/>
+        <image name="eye" width="384" height="384"/>
         <image name="news" width="30" height="30"/>
+        <image name="resend" width="980" height="904"/>
         <image name="user_group_man_woman" width="30" height="30"/>
         <image name="user_male" width="30" height="30"/>
     </resources>
