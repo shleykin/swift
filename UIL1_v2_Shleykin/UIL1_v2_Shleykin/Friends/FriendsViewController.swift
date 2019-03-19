@@ -40,7 +40,7 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
                 sortedFriends.append(friend)
             }
         }
-        
+        print(sortedFriends)
         return sortedFriends.count
 
     }
@@ -49,6 +49,8 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendsViewCell
 
+        
+        
         let friend = searchFriend[indexPath.row]
         cell.friendName.text = friend.name
         cell.friendImage.image = friend.image
