@@ -12,7 +12,7 @@ import UIKit
 class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
 
     let searchController = UISearchController(searchResultsController: nil)
-    var filtredGroup: [Group] = []
+    var searchGroup: [Group] = []
 
 
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearch
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         tableView.tableHeaderView = searchController.searchBar
-        filtredGroup = groups
+        searchGroup = groups
         tableView.reloadData()
 
 
@@ -48,7 +48,7 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearch
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-            return filtredGroup.count
+            return searchGroup.count
         
     }
 
@@ -56,7 +56,7 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearch
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GroupsViewCell.self), for: indexPath) as! GroupsViewCell
 
-        let group = filtredGroup[indexPath.row]
+        let group = searchGroup[indexPath.row]
         cell.groupName.text = group.name
         cell.groupImage.image = group.image
 
@@ -67,9 +67,9 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearch
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let group = filtredGroup[indexPath.row]
+            let group = searchGroup[indexPath.row]
             otherGroups.append(group)
-            filtredGroup.remove(at: indexPath.row)
+            searchGroup.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -80,12 +80,12 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearch
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let searchText = searchBar.text {
             if searchText.isEmpty {
-                filtredGroup = groups
+                searchGroup = groups
             }else {
-                filtredGroup = [];
+                searchGroup = [];
                 for group in groups {
                     if group.name.range(of: searchText) != nil {
-                        filtredGroup.append(group)
+                        searchGroup.append(group)
                     }
                 }
             }

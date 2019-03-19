@@ -21,4 +21,8 @@ class NewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var shareImage: UIImageView!
     @IBOutlet weak var viewCountImage: UIImageView!
     @IBOutlet weak var viewCountLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 }

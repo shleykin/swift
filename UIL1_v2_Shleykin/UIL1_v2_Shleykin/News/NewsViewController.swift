@@ -11,6 +11,7 @@ import UIKit
 class NewsViewController: UIViewController {
 
     @IBOutlet weak var newsCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

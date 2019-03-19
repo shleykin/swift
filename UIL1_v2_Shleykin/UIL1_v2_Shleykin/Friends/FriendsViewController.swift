@@ -13,7 +13,7 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
     
     
     let searchControllerFriend = UISearchController(searchResultsController: nil)
-    var filtredFriend: [Friend] = []
+    var searchFriend: [Friend] = []
 
     
     override func viewDidLoad() {
@@ -24,24 +24,32 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
         searchControllerFriend.searchResultsUpdater = self
         searchControllerFriend.searchBar.delegate = self
         tableView.tableHeaderView = searchControllerFriend.searchBar
-        filtredFriend = friends
+        searchFriend = friends
         tableView.reloadData()
+        print(firstChars)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return filtredFriend.count
+        return firstChars.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section
+        sortedFriends = []
+        for friend in searchFriend {
+            if String(friend.name.prefix(1)) == firstChars[section] {
+                sortedFriends.append(friend)
+            }
+        }
         
+        return sortedFriends.count
+
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendsViewCell
 
-        let friend = filtredFriend[indexPath.row]
+        let friend = searchFriend[indexPath.row]
         cell.friendName.text = friend.name
         cell.friendImage.image = friend.image
 
@@ -54,7 +62,7 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
         if(segue.identifier == "UserPhotosSegue"){
             let destinationController = segue.destination as! AvatarViewController
             if let indexPath = tableView.indexPathForSelectedRow {
-                destinationController.friend = filtredFriend[indexPath.row]
+                destinationController.friend = searchFriend[indexPath.row]
             }
         }
         
@@ -66,12 +74,12 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let searchText = searchBar.text {
             if searchText.isEmpty {
-                filtredFriend = friends
+                searchFriend = friends
             }else {
-                filtredFriend = [];
+                searchFriend = [];
                 for friend in friends {
                     if friend.name.range(of: searchText) != nil {
-                        filtredFriend.append(friend)
+                        searchFriend.append(friend)
                     }
                 }
             }
@@ -88,13 +96,15 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
     
 // МАRK: - Header
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableCell(withIdentifier: "FriendsHeader")
-        header?.backgroundView = UIView()
-        header?.backgroundView?.backgroundColor = .green
-        return header
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let header = tableView.dequeueReusableCell(withIdentifier: "FriendsHeader")
+//        header?.backgroundView = UIView()
+//        header?.backgroundView?.backgroundColor = .green
+//        return header
+//    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return firstChars[section]
     }
-    
-    
 
 }
