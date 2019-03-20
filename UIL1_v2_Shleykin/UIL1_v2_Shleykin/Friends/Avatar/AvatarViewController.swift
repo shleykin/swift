@@ -30,6 +30,8 @@ class AvatarViewController: UIViewController {
            // view.addSubview(likeControl)
         
     }
+    
+    
 }
 
 extension AvatarViewController: UICollectionViewDataSource {
@@ -45,7 +47,17 @@ extension AvatarViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
+    
+
+    
+//    override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+//        
+//    }
+    
+    
+    
 }
+
 
 
 

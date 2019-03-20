@@ -43,6 +43,7 @@ class LikeControl: UIControl {
         addSubview(button)
         addSubview(likeCountLabel)
         
+        
     }
     
    
@@ -50,6 +51,16 @@ class LikeControl: UIControl {
         button.isSelected = !button.isSelected
         likeCount = button.isSelected ? (likeCount + 1) : (likeCount - 1)
         likeCountLabel.textColor = button.isSelected ? .red  : .black
+        
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.6
+        pulse.fromValue = 0.95
+        pulse.toValue = 1.0
+        pulse.autoreverses = true
+        pulse.repeatCount = 2
+        pulse.initialVelocity = 0.5
+        pulse.damping = 1.0
+        layer.add(pulse, forKey: nil)
         
         setUpButton()
         
@@ -59,4 +70,6 @@ class LikeControl: UIControl {
         
     }
 
+    
+    
 }
