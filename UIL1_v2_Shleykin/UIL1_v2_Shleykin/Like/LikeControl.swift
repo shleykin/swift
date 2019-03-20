@@ -8,14 +8,15 @@
 
 import UIKit
 
-let kLikeSize: CGFloat = 40
-let button = UIButton()
-var likeCountLabel = UILabel()
-var likeCount: Int = 0
+
 
 class LikeControl: UIControl {
     
     
+    let button = UIButton()
+    var likeCountLabel = UILabel()
+    let kLikeSize: CGFloat = 40
+    var likeCount: Int = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -11,6 +11,30 @@ import UIKit
 class AvatarCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    
+    
+    override func awakeFromNib() {
+        
+        super.awakeFromNib()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onTap(recognizer:)))
+        addGestureRecognizer(tap)
+        
+    }
+    
+    @objc func onTap(recognizer:UITapGestureRecognizer) {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 0,
+                       options: [],
+                       animations: {
+                        self.imageView.frame.origin.y -= 100
+        })
+        
+    }
+    
 }
 
 
