@@ -24,6 +24,7 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
         searchControllerFriend.searchResultsUpdater = self
         searchControllerFriend.searchBar.delegate = self
         tableView.tableHeaderView = searchControllerFriend.searchBar
+        searchControllerFriend.searchBar.placeholder = "Введите имя"
         searchFriend = friends
         tableView.reloadData()
         print(firstChars)
@@ -59,7 +60,11 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
         let friend = sortedFriends[indexPath.row]
         cell.friendName.text = friend.name
         cell.friendImage.image = friend.image
-
+        
+//        let friend = searchFriend[indexPath.row]
+//        cell.friendName.text = friend.name
+//        cell.friendImage.image = friend.image
+        
         return cell
     }
     

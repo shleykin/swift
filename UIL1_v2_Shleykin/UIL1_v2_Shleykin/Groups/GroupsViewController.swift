@@ -21,6 +21,7 @@ class GroupsViewController: UITableViewController, UISearchBarDelegate, UISearch
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         tableView.tableHeaderView = searchController.searchBar
+        searchController.searchBar.placeholder = "Введите название группы"
         searchGroup = groups
         tableView.reloadData()
 
