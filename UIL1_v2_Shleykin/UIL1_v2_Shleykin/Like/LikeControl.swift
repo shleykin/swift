@@ -8,14 +8,15 @@
 
 import UIKit
 
-let kLikeSize: CGFloat = 40
-let button = UIButton()
-var likeCountLabel = UILabel()
-var likeCount: Int = 0
+
 
 class LikeControl: UIControl {
     
     
+    let button = UIButton()
+    var likeCountLabel = UILabel()
+    let kLikeSize: CGFloat = 40
+    var likeCount: Int = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,6 +43,7 @@ class LikeControl: UIControl {
         addSubview(button)
         addSubview(likeCountLabel)
         
+        
     }
     
    
@@ -49,6 +51,18 @@ class LikeControl: UIControl {
         button.isSelected = !button.isSelected
         likeCount = button.isSelected ? (likeCount + 1) : (likeCount - 1)
         likeCountLabel.textColor = button.isSelected ? .red  : .black
+        
+//LikeButton Animation
+        
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.6
+        pulse.fromValue = 0.95
+        pulse.toValue = 1.0
+        pulse.autoreverses = true
+        pulse.repeatCount = 1
+        pulse.initialVelocity = 0.5
+        pulse.damping = 1.0
+        layer.add(pulse, forKey: nil)
         
         setUpButton()
         
@@ -58,4 +72,6 @@ class LikeControl: UIControl {
         
     }
 
+    
+    
 }

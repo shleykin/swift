@@ -49,9 +49,14 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendsViewCell
 
+        sortedFriends = []
+        for friend in searchFriend {
+            if String(friend.name.prefix(1)) == firstChars[indexPath.section] {
+                sortedFriends.append(friend)
+            }
+        }
         
-        
-        let friend = searchFriend[indexPath.row]
+        let friend = sortedFriends[indexPath.row]
         cell.friendName.text = friend.name
         cell.friendImage.image = friend.image
 

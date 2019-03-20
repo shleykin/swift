@@ -11,6 +11,10 @@ import UIKit
 class AvatarCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    
+
+    
 }
 
 
