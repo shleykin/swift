@@ -52,7 +52,7 @@ class LikeControl: UIControl {
         likeCount = button.isSelected ? (likeCount + 1) : (likeCount - 1)
         likeCountLabel.textColor = button.isSelected ? .red  : .black
         
-        //LikeButton Animation
+//LikeButton Animation
         
         let pulse = CASpringAnimation(keyPath: "transform.scale")
         pulse.duration = 0.6
