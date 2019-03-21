@@ -29,10 +29,8 @@ extension AvatarCollectionViewCell {
                        initialSpringVelocity: 0,
                        options: [],
                        animations: {
-                       self.imageView.frame.origin.y -= 10
-                       self.imageView.frame.origin.x -= 10
-                        
-
+                        self.imageView.bounds.size.height -= 10
+                        self.imageView.bounds.size.width -= 10
         })
 
     }
