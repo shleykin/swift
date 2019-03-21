@@ -108,12 +108,7 @@ class FriendsViewController: UITableViewController , UISearchBarDelegate, UISear
     
 // МАRK: - Header
     
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let header = tableView.dequeueReusableCell(withIdentifier: "FriendsHeader")
-//        header?.backgroundView = UIView()
-//        header?.backgroundView?.backgroundColor = .green
-//        return header
-//    }
+
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return firstChars[section]

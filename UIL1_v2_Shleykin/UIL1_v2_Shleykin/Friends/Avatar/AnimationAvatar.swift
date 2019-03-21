@@ -10,6 +10,7 @@ import UIKit
 
 extension AvatarCollectionViewCell {
     
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()
@@ -23,6 +24,7 @@ extension AvatarCollectionViewCell {
     
     
     @objc func onTap(recognizer:UITapGestureRecognizer) {
+
         UIView.animate(withDuration: 0.5,
                        delay: 0,
                        usingSpringWithDamping: 0.1,
@@ -32,7 +34,10 @@ extension AvatarCollectionViewCell {
                         self.imageView.bounds.size.height -= 10
                         self.imageView.bounds.size.width -= 10
         })
-
+            
     }
     
+
+    
 }
+

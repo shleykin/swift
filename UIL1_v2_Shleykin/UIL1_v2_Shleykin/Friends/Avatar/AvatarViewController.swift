@@ -50,10 +50,6 @@ extension AvatarViewController: UICollectionViewDataSource {
     
 
     
-//    override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-//        
-//    }
-    
     
     
 }
