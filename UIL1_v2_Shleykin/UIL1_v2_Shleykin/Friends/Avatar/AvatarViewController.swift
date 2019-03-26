@@ -34,16 +34,20 @@ class AvatarViewController: UIViewController {
     }
    
     @IBAction func pan(_ recognizer: UIPanGestureRecognizer) {
+//        let velocity    = recognizer.velocity(in: recognizer.view?.superview)
+        
+        
         switch recognizer.state {
         case .began:
-            animator = UIViewPropertyAnimator(duration: 6, curve: .linear) {
-                self.collectionView.center.y += 400
+            animator = UIViewPropertyAnimator(duration: 6, curve: .easeInOut) {
+                self.collectionView.center.x += 100
+                
             }
             animator?.pauseAnimation()
             
         case .changed:
             let translation = recognizer.translation(in: self.view)
-            animator?.fractionComplete = translation.y / 100
+            animator?.fractionComplete = translation.x / 100
         case .ended:
             animator?.continueAnimation(withTimingParameters: nil, durationFactor: 0)
         default:
