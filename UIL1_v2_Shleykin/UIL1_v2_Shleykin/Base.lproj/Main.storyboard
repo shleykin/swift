@@ -594,6 +594,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="VJp-WV-sjn" firstAttribute="centerX" secondItem="7DW-do-sbD" secondAttribute="centerX" id="Hnd-6L-rfk"/>
                             <constraint firstItem="VJp-WV-sjn" firstAttribute="top" secondItem="obA-Ar-s0L" secondAttribute="bottom" id="NxI-oT-seO"/>
@@ -601,12 +602,20 @@
                             <constraint firstItem="obA-Ar-s0L" firstAttribute="centerY" secondItem="7DW-do-sbD" secondAttribute="centerY" id="qHL-qw-mp1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hIa-Zp-RFJ"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SqL-pK-IAD" appends="YES" id="9qh-aj-cus"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="obA-Ar-s0L" id="R02-4R-rwt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fp-eN-acg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="SqL-pK-IAD">
+                    <connections>
+                        <action selector="pan:" destination="ryy-4b-WHO" id="LdM-jj-M91"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2552.8000000000002" y="-205.54722638680661"/>
         </scene>

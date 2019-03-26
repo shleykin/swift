@@ -17,9 +17,7 @@ extension AvatarCollectionViewCell {
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(onTap(recognizer:)))
         addGestureRecognizer(tap)
-        
-        
-        
+
     }
     
     
@@ -29,9 +27,9 @@ extension AvatarCollectionViewCell {
                         self.imageView.bounds.size.height -= 20
                         self.imageView.bounds.size.width -= 20
         }, completion: { _ in
-                UIView.animate(withDuration: 0.5,delay: 0,usingSpringWithDamping: 0.1,initialSpringVelocity: 0,options: [],animations: {
-                self.imageView.bounds.size.height += 20
-                self.imageView.bounds.size.width += 20
+                    UIView.animate(withDuration: 0.5,delay: 0,usingSpringWithDamping: 0.1,initialSpringVelocity: 0,options: [],animations: {
+                            self.imageView.bounds.size.height += 20
+                            self.imageView.bounds.size.width += 20
                     
                 })
         })

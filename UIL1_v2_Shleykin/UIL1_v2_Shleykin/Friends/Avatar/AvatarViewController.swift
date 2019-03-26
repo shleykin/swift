@@ -12,8 +12,10 @@ class AvatarViewController: UIViewController {
     
    // let likeControl = LikeControl(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
     
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var animator : UIViewPropertyAnimator?
     
     var friend: Friend? {
         didSet {
@@ -30,6 +32,25 @@ class AvatarViewController: UIViewController {
            // view.addSubview(likeControl)
         
     }
+   
+    @IBAction func pan(_ recognizer: UIPanGestureRecognizer) {
+        switch recognizer.state {
+        case .began:
+            animator = UIViewPropertyAnimator(duration: 6, curve: .linear) {
+                self.collectionView.center.y += 400
+            }
+            animator?.pauseAnimation()
+            
+        case .changed:
+            let translation = recognizer.translation(in: self.view)
+            animator?.fractionComplete = translation.y / 100
+        case .ended:
+            animator?.continueAnimation(withTimingParameters: nil, durationFactor: 0)
+        default:
+            return
+        }
+    }
+
     
     
 }
